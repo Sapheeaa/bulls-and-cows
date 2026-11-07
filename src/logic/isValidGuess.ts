@@ -1,3 +1,4 @@
+import { describe, test, expect } from '@jest/globals';
 import { createDigitValidator } from './createDigitValidator';
 
 export const isValidGuess = (guess: string, length: number, base: number): boolean => {
