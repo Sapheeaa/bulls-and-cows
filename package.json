@@ -4,7 +4,6 @@
   "description": "Bulls and Cows game - functional programming TDD task",
   "type": "module",
   "scripts": {
-    "prepare": "husky",
     "build": "tsc",
     "lint": "eslint .",
     "format": "prettier --write .",
@@ -31,5 +30,19 @@
   "bugs": {
     "url": "https://github.com/Sapheeaa/bulls-and-cows/issues"
   },
-  "homepage": "https://github.com/Sapheeaa/bulls-and-cows#readme"
+  "homepage": "https://github.com/Sapheeaa/bulls-and-cows#readme",
+  "devDependencies": {
+    "@babel/code-frame": "^8.0.6",
+    "@eslint/js": "^10.0.1",
+    "@types/jest": "^30.0.0",
+    "eslint": "^10.14.0",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "jest": "^30.5.2",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.9.10",
+    "ts-jest": "^29.4.15",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.1"
+  }
 }
