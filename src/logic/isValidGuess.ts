@@ -1,5 +1,5 @@
 import { describe, test, expect } from '@jest/globals';
-import { createDigitValidator } from './createDigitValidator';
+import { createDigitValidator } from './createDigitValidator.js';
 
 export const isValidGuess = (guess: string, length: number, base: number): boolean => {
   const isValidDigit = createDigitValidator(base);
