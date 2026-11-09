@@ -1,0 +1,9 @@
+import { createDigitValidator } from './createDigitValidator.js';
+export const isValidGuess = (guess, length, base) => {
+    const isValidDigit = createDigitValidator(base);
+    const digits = guess.split('');
+    return (guess.length === length && //совпадает длина
+        digits.every(isValidDigit) &&
+        new Set(digits).size === digits.length //так как нельзя сравнить напрямую, то через длины
+    );
+};

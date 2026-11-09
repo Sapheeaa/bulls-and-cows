@@ -1,0 +1,405 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+fieldset {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+label {
+  display: inline-block;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+:root {
+  --bg-0: #0f1226;
+  --bg-1: #171a35;
+  --bg-2: #1f2347;
+  --surface: rgba(255, 255, 255, 0.04);
+  --surface-strong: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.22);
+
+  --text: #eef1ff;
+  --text-muted: #a8aed1;
+  --text-dim: #7c82a8;
+
+  --accent: #7c5cff;
+  --accent-2: #22d3ee;
+  --accent-hover: #9278ff;
+
+  --bull: #34d399;
+  --cow: #fbbf24;
+  --danger: #f87171;
+
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 20px;
+
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --shadow-glow: 0 0 0 1px rgba(124, 92, 255, 0.35), 0 10px 40px rgba(124, 92, 255, 0.25);
+
+  --font: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--bg-0);
+  background-image:
+    radial-gradient(1200px 600px at 10% -10%, rgba(124, 92, 255, 0.25), transparent 60%),
+    radial-gradient(900px 500px at 110% 10%, rgba(34, 211, 238, 0.18), transparent 60%),
+    linear-gradient(180deg, var(--bg-0), var(--bg-1) 60%, var(--bg-2));
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 18px;
+
+  padding: 40px 20px 80px;
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+}
+
+body > h1,
+body > h2,
+body > p,
+body > div,
+body > input,
+body > button {
+  width: min(560px, 100%);
+}
+
+body > h1 {
+  margin: 0;
+  padding: 28px 32px;
+  font-size: clamp(1.6rem, 2.4vw + 1rem, 2.2rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg, rgba(124, 92, 255, 0.35), rgba(34, 211, 238, 0.25));
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-glow);
+  backdrop-filter: blur(10px);
+}
+
+body > h2 {
+  margin: 0;
+  padding: 22px 28px;
+  font-size: clamp(1.2rem, 1.4vw + 1rem, 1.5rem);
+  font-weight: 600;
+  text-align: center;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(10px);
+}
+
+body > div {
+  padding: 18px 22px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(8px);
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 16px;
+
+  font-size: 0.98rem;
+  color: var(--text-muted);
+}
+
+body > div {
+}
+
+body > div > label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 46px;
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.12s ease,
+    box-shadow 0.18s ease,
+    opacity 0.18s ease;
+}
+
+body > div > label:hover {
+  border-color: var(--border-strong);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+body > div > label:active {
+  transform: scale(0.97);
+}
+
+body > div > label > input[type='radio'] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+body > div > label:has(input[type='radio']:checked) {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(124, 92, 255, 0.45);
+}
+
+body > div > label:has(input[type='radio']:focus-visible) {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 2px;
+}
+
+body > div > label:has(input[type='radio']:disabled) {
+  opacity: 0.35;
+  cursor: not-allowed;
+  filter: grayscale(0.4);
+}
+
+body > div > label:has(input[type='radio']:disabled):hover {
+  border-color: var(--border);
+  background: var(--surface-strong);
+}
+
+body > p {
+  margin: 0;
+  padding: 14px 18px;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--accent-2);
+  text-align: center;
+  background: rgba(34, 211, 238, 0.08);
+  border: 1px dashed rgba(34, 211, 238, 0.35);
+  border-radius: var(--radius);
+  letter-spacing: 0.02em;
+}
+
+body > p[style*='red'] {
+  color: var(--danger) !important;
+  background: rgba(248, 113, 113, 0.1);
+  border: 1px dashed rgba(248, 113, 113, 0.45);
+  font-family: var(--font);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+body > input[type='text'] {
+  width: min(560px, 100%);
+  padding: 16px 20px;
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  text-align: center;
+  color: var(--text);
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.25);
+  outline: none;
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease;
+}
+
+body > input[type='text']::placeholder {
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+}
+
+body > input[type='text']:focus {
+  border-color: var(--accent);
+  background: rgba(124, 92, 255, 0.1);
+  box-shadow:
+    0 0 0 3px rgba(124, 92, 255, 0.25),
+    inset 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+body > button {
+  width: auto;
+  min-width: 200px;
+  padding: 14px 26px;
+  font-family: var(--font);
+  font-size: 1.02rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(124, 92, 255, 0.35);
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+  align-self: center;
+}
+
+body > button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 36px rgba(124, 92, 255, 0.45);
+  filter: brightness(1.06);
+}
+
+body > button:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 20px rgba(124, 92, 255, 0.35);
+}
+
+body > button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+body > div > div {
+  width: 100%;
+  padding: 12px 16px;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+body > div > div:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: var(--border-strong);
+}
+
+@media (max-width: 520px) {
+  body {
+    padding: 24px 14px 60px;
+    gap: 14px;
+  }
+
+  body > h1 {
+    padding: 22px 20px;
+  }
+
+  body > h2 {
+    padding: 18px 18px;
+  }
+
+  body > div {
+    padding: 14px 16px;
+    gap: 8px 12px;
+  }
+
+  body > div > label {
+    min-width: 40px;
+    padding: 7px 12px;
+    font-size: 0.9rem;
+  }
+
+  body > input[type='text'] {
+    font-size: 1.2rem;
+    letter-spacing: 0.25em;
+    padding: 14px 16px;
+  }
+
+  body > button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  body > div > div {
+    font-size: 0.92rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
